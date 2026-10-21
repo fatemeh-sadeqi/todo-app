@@ -1,10 +1,17 @@
 tasks = []
 
 def add_task():
-    print("add task chosen")
+    task = input("Enter task: ")
+    tasks.append(task)
+    print("Task added.")
 
 def show_task():
-    print("show task chosen")
+    if len(tasks) == 0:
+        print("No tasks yet")
+    else:
+        for number, task in enumerate(tasks, start=1):
+            print(f"{number}. {task}")
+    
 
 while True:
     print("1- Add task")
@@ -18,7 +25,7 @@ while True:
     elif num == 2:
         show_task()
     elif num == 3:
-        print("Goodby")
+        print("Goodbey")
         break
     else:
         print("Error")
