@@ -34,7 +34,11 @@ def delete_task():
         return
     
     show_task()
-    task_number = int(input("Enter task's number: "))
+
+    try:
+        task_number = int(input("Enter task's number: "))
+    except ValueError:
+        return
 
     if task_number < 1 or task_number > len(tasks):
         print("Invalid number.")
@@ -51,7 +55,11 @@ while True:
     print("3- Delete task")
     print("4- Exit")
 
-    num = int(input("Enter a number: "))
+    try:
+        num = int(input("Enter a number: "))
+    except ValueError:
+        print("Please enter a number: ")
+        continue
 
     if num == 1:
         add_task()
