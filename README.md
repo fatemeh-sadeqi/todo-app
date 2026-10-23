@@ -5,7 +5,7 @@ A command-line to-do app written in Python.
 ## Features
 
 - Add a task
-- Shown all tasks
+- Show all tasks
 - Delete a task
 - Save tasks in a JSON file
 - Handle invalid input
